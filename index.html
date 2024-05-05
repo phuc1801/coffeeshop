@@ -18,6 +18,11 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- js -->
+        <script src="./assets/js/slider.js" defer></script>
+        <script src="./assets/js/blogslider.js" defer></script>
+       
     </head>
     <body>
         <!-- Header -->
@@ -115,7 +120,7 @@
                             </p>
                         </div>
                         <div class="controls">
-                            <button class="control-btn">
+                            <button class="control-btn" id="left">
                                 <svg
                                     width="8"
                                     height="14"
@@ -131,7 +136,7 @@
                                     />
                                 </svg>
                             </button>
-                            <button class="control-btn">
+                            <button class="control-btn" id="right">
                                 <svg
                                     width="8"
                                     height="14"
@@ -250,6 +255,166 @@
                                             class="line-clamp break-all"
                                         >
                                            Latte Đá
+                                        </a>
+                                    </h3>
+                                    <div class="rating">
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt="Star"
+                                            class="star"
+                                        />
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line-2 break-all">
+                                    Get the best course, gain knowledge and
+                                    shine for your future career.
+                                </p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course item 4 -->
+                        <div class="course-item">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/bacsiu.jpg"
+                                    alt="Basic web design"
+                                    class="thumb"
+                                />
+                            </a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title">
+                                        <a
+                                            href="#!"
+                                            class="line-clamp break-all"
+                                        >
+                                            Bạc Sỉu
+                                        </a>
+                                    </h3>
+                                    <div class="rating">
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt="Star"
+                                            class="star"
+                                        />
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line-2 break-all">
+                                    Get the best course, gain knowledge and
+                                    shine for your future career.
+                                </p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course item 5 -->
+                        <div class="course-item">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/bacsiu.jpg"
+                                    alt="Basic web design"
+                                    class="thumb"
+                                />
+                            </a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title">
+                                        <a
+                                            href="#!"
+                                            class="line-clamp break-all"
+                                        >
+                                            Bạc Sỉu
+                                        </a>
+                                    </h3>
+                                    <div class="rating">
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt="Star"
+                                            class="star"
+                                        />
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line-2 break-all">
+                                    Get the best course, gain knowledge and
+                                    shine for your future career.
+                                </p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course item 5 -->
+                        <div class="course-item">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/bacsiu.jpg"
+                                    alt="Basic web design"
+                                    class="thumb"
+                                />
+                            </a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title">
+                                        <a
+                                            href="#!"
+                                            class="line-clamp break-all"
+                                        >
+                                            Bạc Sỉu
+                                        </a>
+                                    </h3>
+                                    <div class="rating">
+                                        <img
+                                            src="./assets/icons/star.svg"
+                                            alt="Star"
+                                            class="star"
+                                        />
+                                        <span class="value">4.5</span>
+                                    </div>
+                                </div>
+                                <p class="desc line-clamp line-2 break-all">
+                                    Get the best course, gain knowledge and
+                                    shine for your future career.
+                                </p>
+                                <div class="foot">
+                                    <span class="price">$120.75</span>
+                                    <button class="btn book-btn">
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course item 6 -->
+                        <div class="course-item">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/bacsiu.jpg"
+                                    alt="Basic web design"
+                                    class="thumb"
+                                />
+                            </a>
+                            <div class="info">
+                                <div class="head">
+                                    <h3 class="title">
+                                        <a
+                                            href="#!"
+                                            class="line-clamp break-all"
+                                        >
+                                            Bạc Sỉu
                                         </a>
                                     </h3>
                                     <div class="rating">
@@ -660,7 +825,7 @@
                     <!-- Column 1 -->
                     <div class="column">
                         <img
-                            src="./assets/img/logo-white.svg"
+                            src="./assets/img/logo.svg"
                             alt="Lesson."
                             class="logo"
                         />

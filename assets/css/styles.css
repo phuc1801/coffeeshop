@@ -272,7 +272,12 @@ a {
 }
 
 .popular .course-list {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 30px);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* display: flex; */
     gap: 30px;
     margin-top: 55px;
 }
@@ -510,7 +515,10 @@ a {
 }
 
 .blog .blog-list {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 20px);
+    scroll-behavior: smooth;
     gap: 30px;
     margin-top: 55px;
     overflow: hidden;
@@ -518,7 +526,6 @@ a {
 
 .blog .item {
     flex-shrink: 0;
-    width: calc(33.33% - 20px);
     background: #ffffff;
     border-radius: 16px;
 }
