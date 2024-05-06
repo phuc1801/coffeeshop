@@ -16,12 +16,16 @@
             rel="stylesheet"
         />
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />   
+        <link rel="stylesheet" href="./assets/css/login.css">
         <!-- js -->
         <script src="./assets/js/slider.js" defer></script>
         <script src="./assets/js/blogslider.js" defer></script>
+        <script src="./assets/js/login.js" defer></script>
        
     </head>
     <body>
@@ -62,6 +66,58 @@
             </div>
         </header>
 
+        <!-- Login -->
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form>
+                    <img src="./assets/img/logo.svg" alt="logo">
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registeration</span>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form>
+                    <img src="./assets/img/logo.svg" alt="logo">
+                    <h1>Sign In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email password</span>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#">Forget Your Password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all of site features</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Register with your personal details to use all of site features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <main>
             <!-- Hero -->
             <div class="hero">
@@ -79,10 +135,10 @@
                         <!-- Hero right -->
                         <div class="content-block">
                             <h1 class="heading lv1">
-                                Learn without limits and spread knowledge.
+                                Cà Phê Đâu Chỉ Là Thức Uống
                             </h1>
                             <p class="desc">
-                                Today's good mood is sponsored by coffee search for your coffee now
+                                Cà phê hay cuộc đời đều mang vị đắng chát khó quên nhưng ẩn sâu bên trong đó luôn phảng phất hương thơm và vị ngọt.
                             </p>
                             <div class="cta-group">
                                 <a href="#!" class="btn hero-cta"
@@ -160,7 +216,7 @@
                         <div class="course-item">
                             <a href="#!">
                                 <img
-                                    src="./assets/img/bacsiu.jpg"
+                                    src="./assets/img/latenong.jpg"
                                     alt="Basic web design"
                                     class="thumb"
                                 />
@@ -172,7 +228,7 @@
                                             href="#!"
                                             class="line-clamp break-all"
                                         >
-                                            Bạc Sỉu
+                                            Latte Nóng
                                         </a>
                                     </h3>
                                     <div class="rating">
@@ -282,7 +338,7 @@
                         <div class="course-item">
                             <a href="#!">
                                 <img
-                                    src="./assets/img/bacsiu.jpg"
+                                    src="./assets/img/chocolatenong.jpg"
                                     alt="Basic web design"
                                     class="thumb"
                                 />
@@ -294,7 +350,7 @@
                                             href="#!"
                                             class="line-clamp break-all"
                                         >
-                                            Bạc Sỉu
+                                            Chocolate Nóng
                                         </a>
                                     </h3>
                                     <div class="rating">

@@ -1,23 +1,35 @@
-const course = document.querySelector(".blog-list");
-const arrowBtns = document.querySelectorAll(".blog-list .item");
-const firstItem = course.querySelector(".blog-item").offsetWidth + 30;
+const blogList = document.querySelector(".blog-list");
+const firstItem = blogList.querySelector(".item").offsetWidth + 30;
 let autoScrollInterval;
 
 // Hàm tự động cuộn
 function startAutoScroll() {
     autoScrollInterval = setInterval(() => {
-        // Kiểm tra xem không có nút điều khiển nào được nhấp mới tự động cuộn
-        if (!document.querySelector('.feedback .dot.active')) {
-            course.scrollLeft += firstItem; // Cuộn sang phải mỗi 2 giây
+        // Lấy vị trí hiện tại của slide và tính toán slide tiếp theo
+        const currentScrollLeft = blogList.scrollLeft;
+        const nextScrollLeft = currentScrollLeft + firstItem;
+
+        // Cuộn đến slide tiếp theo với hiệu ứng mượt mà
+        blogList.scrollTo({
+            left: nextScrollLeft,
+            behavior: 'smooth'
+        });
+
+        // Kiểm tra xem slide hiện tại đã cuộn đến cuối danh sách chưa
+        if (nextScrollLeft >= blogList.scrollWidth - blogList.clientWidth) {
+            // Nếu đã cuộn đến cuối danh sách, quay lại slide đầu tiên
+            blogList.scrollTo({
+                left: 0,
+                behavior: 'smooth'
+            });
         }
-    }, 500); // Thay đổi thời gian tự động cuộn thành 2 giây
+    }, 3000); // Thời gian tự động cuộn là 3 giây
 }
 
 // Dừng tự động cuộn
 function stopAutoScroll() {
     clearInterval(autoScrollInterval);
 }
-
 
 // Bắt đầu tự động cuộn khi trang được tải
 startAutoScroll();
