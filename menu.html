@@ -13,6 +13,8 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +28,12 @@
                     alt="Lesson."
                     class="logo"
                 />
-
+                <!-- search -->
+                <form onsubmit="event.preventDefault();" role="search">
+                    <label for="search">Search for stuff</label>
+                    <input id="search" type="search" placeholder="Search..." autofocus required />
+                    <button type="submit">Go</button>    
+                </form>
                 <!-- Nav -->
                 <nav class="nav">
                     <ul>
@@ -45,12 +52,14 @@
                     </ul>
                 </nav>
 
-                <!-- Action -->
-                <div class="action">
-                    <a href="#!" class="btn sign-up-btn">Sign In</a>
-                </div>
+            
             </div>
         </div>
     </header>
+    <main>
+        <div class=".main-content">
+            <h1>hdhd</h1>
+        </div>
+    </main>
 </body>
 </html>
