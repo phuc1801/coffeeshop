@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span>or use your email password</span>
                 <input type="username" placeholder="Username" name="username" required="">
                 <input type="password" placeholder="Password" name="password" required="">
-                <a href="#">Forget Your Password?</a>
+                <a href="forgot_password.php">Forget Your Password?</a>
                 <button>Sign In</button>
                 <button class="close-btnX2" style="display: none">Close</button>
                 
