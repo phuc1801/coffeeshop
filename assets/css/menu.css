@@ -1,12 +1,10 @@
-
 * {
     box-sizing: border-box;
 }
 
-
-.course-list1{
-    display: flex;
-    flex-wrap: wrap;
+.course-list1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 55px;
 }
@@ -20,15 +18,19 @@
 }
 
 .popular .course-item {
-    flex: 1;
     background: #ffffff;
     border: 1px solid #e2dfda;
     border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.popular .course-item:hover {
+    transform: translateY(-5px);
 }
 
 .popular-top .desc {
     margin-top: 16px;
-    width: 458px;
+    max-width: 458px;
     font-size: 1.8rem;
     line-height: 1.67;
     color: #5f5b53;

@@ -47,7 +47,7 @@
                                 <a href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="menu.html">Menu</a>
+                                <a href="menu.php">Menu</a>
                             </li>
                             <li>
                                 <a href="#product">Product</a>
@@ -66,66 +66,7 @@
             </div>
         </header>
 
-        <!-- Login -->
-        <div class="blur-bg-overlay">
-            <div class="container" id="container">
-                <div class="form-container sign-up">
-                    <form>
-                        
-                        <img src="./assets/img/logo.svg" alt="logo">
-                        <h1>Create Account</h1>
-                        <div class="social-icons">
-                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email for registeration</span>
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <Button>Sign up</Button>
-                        <button class="close-btnX1">Close</button>
-                    </form>
-                </div>
-                <div class="form-container sign-in">
-                    <form>
-                       
-                        <img src="./assets/img/logo.svg" alt="logo">
-                        <h1>Sign In</h1>
-                        <div class="social-icons">
-                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                        <span>or use your email password</span>
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <a href="#">Forget Your Password?</a>
-                        <button>Sign In</button>
-                        <button class="close-btnX2">Close</button>
-                        
-                    </form>
-                </div>
-                <div class="toggle-container">
-                    <div class="toggle">
-                       
-                        
-                        <div class="toggle-panel toggle-left">                          
-                            <h1>Welcome Back!</h1>
-                            <p>Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                            <button class="hidden" id="login">Sign In</button>
-                        </div>
-                        <div class="toggle-panel toggle-right">                            
-                            <h1>Hello, Friend!</h1>
-                            <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
-                            <button class="hidden" id="register">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         
 
         <main id="home">

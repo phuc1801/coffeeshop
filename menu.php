@@ -11,10 +11,10 @@
         rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/search.css">
-    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/reset.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="./assets/css/styles.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="./assets/css/search.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="./assets/css/menu.css?v=<?php echo time();?>">
     <title>Document</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
                 <nav class="nav">
                     <ul>
                         <li class="active">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                         </li>
                         <li>
                             <a href="#!">Menu</a>
