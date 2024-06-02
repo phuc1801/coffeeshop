@@ -37,11 +37,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <!-- Logo -->
                 <img src="./assets/img/logo.svg" alt="Lesson." class="logo">
                 <!-- search -->
-                <form onsubmit="event.preventDefault();" role="search">
-                    <label for="search">Search for stuff</label>
-                    <input id="search" type="search" placeholder="Search..." autofocus required />
-                    <button type="submit" class="btn-go">Go</button>    
-                </form>
+               
                 <!-- Nav -->
                 <nav class="nav">
                     <ul>

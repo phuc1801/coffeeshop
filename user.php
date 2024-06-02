@@ -108,10 +108,13 @@
                         </li>
 
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-regular fa-circle-question"></i>
-                            Help & Support
-                            </a>
+                           
+                                <a href="cart.php">
+                                <i class="fa-regular fa-circle-question"></i>
+                                Giỏ hàng
+                                </a>
+                           
+                            
                         </li>
                         <hr />
 
