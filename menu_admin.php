@@ -111,16 +111,18 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="foot">
                             <span class="price">$<?php echo htmlspecialchars($product['gia']); ?></span>
                             <div class="btn-cbt">
-                                <a href="">
-                                    <button class="btn-minwidth book-btn" >
-                                        Sửa
+                                <a href="edit.php?id=<?php echo $product['id']; ?>">
+                                     <button class="btn-minwidth book-btn">
+                                         Sửa
                                     </button>
                                 </a>
-                                <a href="">
+
+                                <a href="delete.php?id=<?php echo $product['id']; ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
                                     <button class="btn-minwidth book-btn">
                                         Xoá
                                     </button>
-                                </a>                              
+                                </a>
+                          
                             </div>
                             
                         </div>

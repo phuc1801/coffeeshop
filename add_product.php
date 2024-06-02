@@ -12,7 +12,7 @@ if(isset($_POST['btn'])){
     VALUES('$name', '$img', '$baohanh', '$trangthai', '$gia')";
     $stmt = $conn->prepare($sql);
     $query = $stmt->execute();
-    $upload_directory = '../img/';
+    $upload_directory = '../upload';
     if($query){
         if (move_uploaded_file($img_tmp_name, $upload_directory . $img)) {
             echo '<div class="alert alert-success" role="alert">Thêm thành công!</div>';
