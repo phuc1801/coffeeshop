@@ -1,14 +1,26 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']) || $_SESSION['type'] != 1) {
+if (!isset($_SESSION['username']) || $_SESSION['type'] != 0) {
     header('Location: login.php');
     exit();
 }
 
 include "connect.php";
 
+// Check if there's a search query
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
 $sql = "SELECT * FROM product";
+if ($search) {
+    $sql .= " WHERE ten LIKE :search";
+}
+
 $stmt = $conn->prepare($sql);
+
+if ($search) {
+    $stmt->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+}
+
 $stmt->execute();
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -37,16 +49,16 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <!-- Logo -->
                 <img src="./assets/img/logo.svg" alt="Lesson." class="logo">
                 <!-- search -->
-                <form onsubmit="event.preventDefault();" role="search">
+                <form action="menu.php" method="GET" role="search">
                     <label for="search">Search for stuff</label>
-                    <input id="search" type="search" placeholder="Search..." autofocus required />
-                    <button type="submit" class="btn-go">Go</button>    
+                    <input id="search" type="search" name="search" placeholder="Search..." autofocus required />
+                    <button type="submit" class="btn-go">Go</button>
                 </form>
                 <!-- Nav -->
                 <nav class="nav">
                     <ul>
                         <li class="active">
-                            <a href="index.php">Home</a>
+                            <a href="user.php">Home</a>
                         </li>
                         <li>
                             <a href="#!">Menu</a>
@@ -72,7 +84,6 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         Cà phê đặc sản thức uống đa bản sắc
                     </p>
                 </div>
-                
             </div>
             
             <div class="course-list1">
@@ -113,6 +124,5 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </div>
-
 </body>
 </html>

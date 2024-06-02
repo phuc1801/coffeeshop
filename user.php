@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -52,7 +54,7 @@
                                 <a href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="menu_admin.php">Menu</a>
+                                <a href="menu.php">Menu</a>
                             </li>
                             <li>
                                 <a href="#product">Product</a>
