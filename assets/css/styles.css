@@ -18,6 +18,24 @@ body {
 }
 
 /* Common */
+.p-list{
+    margin-top: 10px;
+    color: #fea31b;
+}
+
+.btn-minwidth{
+    display: inline-block;
+    min-width: 100px;
+    padding: 0 10px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+    border-radius: 999px;
+}
+
 a {
     text-decoration: none;
 }

@@ -18,7 +18,7 @@
 }
 
 .hide-popup .blur-bg-overlay{
-    /* display: none; */
+    display: block;
 }
 
 .blur-bg-overlay{

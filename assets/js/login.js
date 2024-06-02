@@ -2,8 +2,8 @@ const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 const showpBtn = document.querySelector('.sign-up-btn');
-// const hideBtn1 = document.querySelector('.close-btnX1');
-// const hideBtn2 = document.querySelector('.close-btnX2');
+const hideBtn1 = document.querySelector('.close-btnX1');
+const hideBtn2 = document.querySelector('.close-btnX2');
 
 
 // mo sign in

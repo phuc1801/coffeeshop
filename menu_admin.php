@@ -73,17 +73,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </p>
                 </div>
                 <div class="controls">
-                    <button class="control-btn" id="left">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <button class="control-btn" id="right">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                    <a href="add_product.php">
+                        <button class="btn book-btn">
+                            Thêm
+                        </button>
+                    </a>
                 </div>
+                
             </div>
             
             <div class="course-list1">
@@ -114,9 +110,19 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </p>
                         <div class="foot">
                             <span class="price">$<?php echo htmlspecialchars($product['gia']); ?></span>
-                            <button class="btn book-btn">
-                                Book Now
-                            </button>
+                            <div class="btn-cbt">
+                                <a href="">
+                                    <button class="btn-minwidth book-btn" >
+                                        Sửa
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button class="btn-minwidth book-btn">
+                                        Xoá
+                                    </button>
+                                </a>                              
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
