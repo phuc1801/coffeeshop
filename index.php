@@ -106,9 +106,9 @@
                         </li>
 
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
+                            <a href="pending_orders.php">
                             <i class="fa-regular fa-circle-question"></i>
-                            Help & Support
+                            Duyệt đơn hàng
                             </a>
                         </li>
                         <hr />

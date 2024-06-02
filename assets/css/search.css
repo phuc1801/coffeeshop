@@ -11,7 +11,7 @@
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
 
-form {
+.menu-form {
   position: relative;
   width: 40rem;
   border-radius: 999px;

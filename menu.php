@@ -49,7 +49,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <!-- Logo -->
                 <img src="./assets/img/logo.svg" alt="Lesson." class="logo">
                 <!-- search -->
-                <form action="menu.php" method="GET" role="search">
+                <form action="menu.php" method="GET" role="search" class="menu-form">
                     <label for="search">Search for stuff</label>
                     <input id="search" type="search" name="search" placeholder="Search..." autofocus required />
                     <button type="submit" class="btn-go">Go</button>
@@ -114,9 +114,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </p>
                         <div class="foot">
                             <span class="price">$<?php echo htmlspecialchars($product['gia']); ?></span>
-                            <button class="btn book-btn">
-                                Book Now
-                            </button>
+                            <form action="add_to_cart.php" method="POST">
+                                <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
+                                <button class="btn book-btn" type="submit">
+                                    Book Now
+                                </button>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
