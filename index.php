@@ -99,9 +99,9 @@
                         </li>
 
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
+                            <a href="account_management.php">
                             <i class="fa-solid fa-sliders"></i>
-                            Settings
+                            Quản lý tài khoản
                             </a>
                         </li>
 

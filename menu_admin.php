@@ -99,7 +99,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <li class="profile-dropdown-list-item">
                             <a href="#">
                             <i class="fa-solid fa-sliders"></i>
-                            Settings
+                            Quản lý tài khoản
                             </a>
                         </li>
 
