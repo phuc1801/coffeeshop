@@ -42,7 +42,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="main-content">
             <div class="body">
                 <!-- Logo -->
-                <img src="./assets/img/logo.svg" alt="Lesson." class="logo">
+                <a href="index.php"> <img src="./assets/img/logo.svg" alt="Lesson." class="logo"></a>
                 <!-- search -->
                
                 <!-- Nav -->
