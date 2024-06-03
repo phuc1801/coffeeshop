@@ -1,4 +1,24 @@
+<?php
+session_start();
+include "connect.php";
 
+// Kiểm tra xem người dùng đã đăng nhập chưa
+if (!isset($_SESSION['username'])) {
+    die('Bạn chưa đăng nhập.');
+}
+
+$username = $_SESSION['username'];
+
+// Truy vấn thông tin người dùng từ bảng `account`
+$sql = "SELECT username FROM account WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->execute([$username]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$user) {
+    die('Không tìm thấy người dùng.');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +93,7 @@
                         </div>
 
                         <span
-                            >Victoria
+                            ><?php echo htmlspecialchars($user['username']); ?>
                             <i class="fa-solid fa-angle-down"></i>
                         </span>
                         </div>

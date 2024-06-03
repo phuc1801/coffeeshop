@@ -5,6 +5,10 @@ if (!isset($_SESSION['username']) || $_SESSION['type'] != 1) {
     exit();
 }
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include "connect.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id']) && isset($_GET['email'])) {
@@ -36,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id']) && isset($_GET['em
 }
 
 function sendMail($email) {
-    require "../PHPMailer-master/src/PHPMailer.php";
-    require "../PHPMailer-master/src/SMTP.php";
-    require '../PHPMailer-master/src/Exception.php';
+    require "./PHPMailer-master/src/PHPMailer.php";
+    require "./PHPMailer-master/src/SMTP.php";
+    require './PHPMailer-master/src/Exception.php';
     $mail = new PHPMailer\PHPMailer\PHPMailer(true); // true: enables exceptions
     try {
         $mail->SMTPDebug = 0; // Đặt chế độ debug để xem log chi tiết
