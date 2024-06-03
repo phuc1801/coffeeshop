@@ -92,7 +92,7 @@
                         </li>
 
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
+                            <a href="analytics.php">
                             <i class="fa-solid fa-chart-line"></i>
                             Analytics
                             </a>
