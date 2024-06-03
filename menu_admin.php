@@ -27,6 +27,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="./assets/css/styles.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="./assets/css/search.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="./assets/css/menu.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="assets/css/profile.css?v=<?php echo time();?>">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script src="assets/js/profile.js" defer></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -55,6 +62,63 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </li>
                     </ul>
                 </nav>
+                <div class="profile-dropdown">
+                        <div onclick="toggle()" class="profile-dropdown-btn">
+                        <div class="profile-img">
+                            <i class="fa-solid fa-circle"></i>
+                        </div>
+
+                        <span
+                            >Victoria
+                            <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                        </div>
+
+                        <ul class="profile-dropdown-list">
+                        <li class="profile-dropdown-list-item">
+                            <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            Edit Profile
+                            </a>
+                        </li>
+
+                        <li class="profile-dropdown-list-item">
+                            <a href="#">
+                            <i class="fa-regular fa-envelope"></i>
+                            Inbox
+                            </a>
+                        </li>
+
+                        <li class="profile-dropdown-list-item">
+                            <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Analytics
+                            </a>
+                        </li>
+
+                        <li class="profile-dropdown-list-item">
+                            <a href="#">
+                            <i class="fa-solid fa-sliders"></i>
+                            Settings
+                            </a>
+                        </li>
+
+                        <li class="profile-dropdown-list-item">
+                            <a href="pending_orders.php">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Duyệt đơn hàng
+                            </a>
+                        </li>
+                        <hr />
+
+                        <li class="profile-dropdown-list-item">
+                            <a href="logout.php">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Log out
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </header>
