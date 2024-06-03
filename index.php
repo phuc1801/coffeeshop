@@ -78,7 +78,7 @@
 
                         <ul class="profile-dropdown-list">
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
+                            <a href="edit_profile.php">
                             <i class="fa-regular fa-user"></i>
                             Edit Profile
                             </a>
