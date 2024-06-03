@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['username']) || $_SESSION['type'] != 1) {
+    header('Location: login.php');
+    exit();
+}
+
 include "connect.php";
 
 // Kiểm tra xem người dùng đã đăng nhập chưa
