@@ -134,7 +134,7 @@ if (!$user) {
                         <li class="profile-dropdown-list-item">
                            
                                 <a href="cart.php">
-                                <i class="fa-regular fa-circle-question"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
                                 Giỏ hàng
                                 </a>
                            

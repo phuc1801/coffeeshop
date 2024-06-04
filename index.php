@@ -117,7 +117,7 @@ if (!$user) {
                         </li>
 
                         <li class="profile-dropdown-list-item">
-                            <a href="#">
+                            <a href="home.php">
                             <i class="fa-regular fa-envelope"></i>
                             Inbox
                             </a>

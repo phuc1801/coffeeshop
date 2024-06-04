@@ -90,7 +90,7 @@ if (!$user) {
                             <a href="user.php">Home</a>
                         </li>
                         <li>
-                            <a href="#!">Menu</a>
+                            <a href="menu.php">Menu</a>
                         </li>
                         <li>
                             <a href="#!">Pricing</a>
