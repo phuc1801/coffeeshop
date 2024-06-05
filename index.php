@@ -26,6 +26,53 @@ if (!$user) {
 ?>
 
 
+<?php 
+
+include "connect.php";
+
+try {
+    $sql1 = "SELECT * FROM home";
+    $stmt = $conn->prepare($sql1);
+    $stmt->execute();
+    $home = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (count($home) > 0) {
+        $item = $home[0]; // Lấy hàng đầu tiên
+    } else {
+        $item = [
+            'tieude' => "Không có tiêu đề",
+            'noidung' => "Không có nội dung",
+            'nguoimua' => 0,
+            'danhgia' => 0,
+            'cauhoi' => "Không có câu hỏi",
+            'tieudemot' => "Không có tiêu đề một",
+            'ndtieudemot' => "Không có nd tiêu đề một",
+            'anhmot' => "Không có ảnh một",
+            'anhhai' => "Không có ảnh hai",
+            'tieudehai' => "Không có tiêu đề hai",
+            'ndtieudehai' => "Không có nd tiêu đề hai",
+            'anhba' => "Không có ảnh ba"
+        ];
+    }
+} catch (PDOException $e) {
+    echo "Lỗi: " . $e->getMessage();
+    $item = [
+        'tieude' => "Lỗi khi truy vấn dữ liệu",
+        'noidung' => "Không có nội dung",
+        'nguoimua' => 0,
+        'danhgia' => 0,
+        'cauhoi' => "Không có câu hỏi",
+        'tieudemot' => "Không có tiêu đề một",
+        'ndtieudemot' => "Không có nd tiêu đề một",
+        'anhmot' => "Không có ảnh một",
+        'anhhai' => "Không có ảnh hai",
+        'tieudehai' => "Không có tiêu đề hai",
+        'ndtieudehai' => "Không có nd tiêu đề hai",
+        'anhba' => "Không có ảnh ba"
+    ];
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -179,10 +226,10 @@ if (!$user) {
                         <!-- Hero right -->
                         <div class="content-block">
                             <h1 class="heading lv1">
-                                Cà Phê Đâu Chỉ Là Thức Uống
+                                <?php echo htmlspecialchars($item['tieude']); ?>
                             </h1>
                             <p class="desc">
-                                Cà phê hay cuộc đời đều mang vị đắng chát khó quên nhưng ẩn sâu bên trong đó luôn phảng phất hương thơm và vị ngọt.
+                                <?php echo htmlspecialchars($item['noidung']); ?>
                             </p>
                             <div class="cta-group">
                                 <a href="#!" class="btn hero-cta"
@@ -200,8 +247,8 @@ if (!$user) {
                             </div>
                             <p class="desc">Tương tác gần đây</p>
                             <p class="desc stats">
-                                <strong>50K</strong> Người mua
-                                <strong>3000+</strong> Đánh giá
+                                <strong><?php echo htmlspecialchars($item['nguoimua']); ?>K</strong> Người mua
+                                <strong><?php echo htmlspecialchars($item['danhgia']); ?>+</strong> Đánh giá
                             </p>
                         </div>
                     </div>
@@ -561,7 +608,7 @@ if (!$user) {
                                     class="open-quotes"
                                 />
                                 <blockquote>
-                                    Dưới ánh nắng sớm mai, hương thơm của ca phê lan tỏa, như là một giai điệu êm đềm, mời gọi ta bước vào thế giới của những suy tư sâu lắng và những cuộc trò chuyện bất tận.
+                                    <?php echo htmlspecialchars($item['cauhoi']); ?>
                                 </blockquote>
                             </div>
                         </div>
@@ -642,21 +689,20 @@ if (!$user) {
                         <div class="images">
                             <img
                                 class="lower"
-                                src="./assets/img/hopcoffee.jpg"
+                                src="./assets/img/<?php echo htmlspecialchars($item['anhmot']); ?>"
                                 alt="Learner outcomes through our awesome platform"
                             />
                             <img
-                                src="./assets/img/longcoffee.jpg"
+                                src="./assets/img/<?php echo htmlspecialchars($item['anhhai']); ?>"
                                 alt="Learner outcomes through our awesome platform"
                             />
                         </div>
                         <div class="content">
                             <h2 class="heading lv2">
-                                Cà Phê Sữa Đá Hoà Tan
+                                <?php echo htmlspecialchars($item['tieudemot']); ?>
                             </h2>
                             <p class="desc">
-                                Thật dễ dàng để bắt đầu ngày mới với tách cà phê sữa đá sóng sánh, thơm ngon như cà phê pha phin. 
-                                Vị đắng thanh của cà phê hoà quyện với vị ngọt béo của sữa, giúp bạn luôn tỉnh táo và hứng khởi cho ngày làm việc thật hiệu quả.
+                                <?php echo htmlspecialchars($item['ndtieudemot']); ?>
                             </p>
                             <p class="desc">Coming Soon</p>
                             <a href="#!" class="btn cta-btn">Đăng kí trước</a>
@@ -671,18 +717,16 @@ if (!$user) {
                     <div class="body">
                         <div class="images">
                             <img
-                                src="./assets/img/bottlecfsd.jpg"
+                                src="./assets/img/<?php echo htmlspecialchars($item['anhba']); ?>"
                                 alt="Take the next step toward your personal and professional goals with Lesson."
                             />
                         </div>
                         <div class="content">
                             <h2 class="heading lv2">
-                                Chai Fresh
+                                <?php echo htmlspecialchars($item['tieudehai']); ?>
                             </h2>
                             <p class="desc">
-                                Thức uống "đánh thức" năng lượng ngày mới hợp cho những ai mới bước vào thế giới cà phê hoặc ghiền cà phê nhưng muốn khám phá thêm nhiều hương vị mới.
-                                Tiết kiệm hơn phù hợp với bình thường mới, giúp bạn tận hưởng một ngày dài trọn vẹn
-                                Sản phẩm dùng ngon nhất trong ngày. Sản phẩm mặc định mức đường và không đá.
+                                <?php echo htmlspecialchars($item['ndtieudehai']); ?>
                             </p>
                             <a href="#!" class="btn cta-btn">Đăng kí trước</a>
                         </div>
