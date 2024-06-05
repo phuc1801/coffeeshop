@@ -94,7 +94,7 @@ if (!$user) {
                         </li>
                         
                         <li>
-                            <a href="blog.php">Blog</a>
+                            <a href="blog2.php">Blog</a>
                         </li>
                     </ul>
                 </nav>

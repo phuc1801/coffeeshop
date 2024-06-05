@@ -28,7 +28,7 @@
                         <h3 class="card-title mt-3">
                             <a href="#!" class="text-dark">Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê</a>
                         </h3>
-                        <a href="index.php" class="btn btn-primary mt-3">Quay lại</a>
+                        <a href="user.php" class="btn btn-primary mt-3">Quay lại</a>
                     </div>
                 </div>
             </div>

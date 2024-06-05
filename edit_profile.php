@@ -93,6 +93,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<?php
+// Kết nối đến cơ sở dữ liệu
+include "connect.php";
+
+// Truy vấn để lấy giá trị 'type' của người dùng hiện tại
+$sql3 = "SELECT type FROM account WHERE username = :username_id";
+$stmt = $conn->prepare($sql3);
+$stmt->bindParam(':username_id', $username_id); // Thay user_id bằng biến chứa ID của người dùng hiện tại
+$stmt->execute();
+$phanloai = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// Kiểm tra giá trị của 'type' và định tuyến người dùng đến trang tương ứng
+if ($phanloai['type'] == 1) {
+    $redirect_url = "index.php";
+} else {
+    $redirect_url = "user.php";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,7 +246,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div> <!-- Row END -->
             <!-- button -->
             <div class="gap-3 d-md-flex justify-content-md-end text-center" style="margin-bottom: 50px;">
-                <a href="index.php" class="btn btn-primary btn-lg">Quay lại</a>
+                <a href="<?php echo $redirect_url; ?>" class="btn btn-primary btn-lg">Quay lại</a>
 
                 <button type="submit" class="btn btn-primary btn-lg">Sửa profile</button>
             </div>

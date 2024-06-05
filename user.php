@@ -377,7 +377,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 Vị đắng thanh của cà phê hoà quyện với vị ngọt béo của sữa, giúp bạn luôn tỉnh táo và hứng khởi cho ngày làm việc thật hiệu quả.
                             </p>
                             <p class="desc">Coming Soon</p>
-                            <a href="#!" class="btn cta-btn">Đăng kí trước</a>
+                            <a href="thank_re.php" class="btn cta-btn">Đăng kí trước</a>
                         </div>
                     </div>
                 </div>
@@ -402,7 +402,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 Tiết kiệm hơn phù hợp với bình thường mới, giúp bạn tận hưởng một ngày dài trọn vẹn
                                 Sản phẩm dùng ngon nhất trong ngày. Sản phẩm mặc định mức đường và không đá.
                             </p>
-                            <a href="#!" class="btn cta-btn">Đăng kí trước</a>
+                            <a href="thank_re.php" class="btn cta-btn">Đăng kí trước</a>
                         </div>
                     </div>
                 </div>
@@ -435,7 +435,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog2.php" class="btn">Read More</a>
                             </div>
                         </div>
 
@@ -456,7 +456,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog2.php" class="btn">Read More</a>
                             </div>
                         </div>
 
@@ -477,7 +477,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog2.php" class="btn">Read More</a>
                             </div>
                         </div>
                         <!-- Blog item 4 -->
