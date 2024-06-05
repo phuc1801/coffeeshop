@@ -761,7 +761,7 @@ try {
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog.php" class="btn">Read More</a>
                             </div>
                         </div>
 
@@ -782,7 +782,7 @@ try {
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog.php" class="btn">Read More</a>
                             </div>
                         </div>
 
@@ -803,7 +803,7 @@ try {
                                         Đây là một blog rất hay với hình ảnh rất chuyên nghiệp về cà phê 
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog.php" class="btn">Read More</a>
                             </div>
                         </div>
                         <!-- Blog item 4 -->
@@ -933,7 +933,7 @@ try {
                                         and get remot job?
                                     </a>
                                 </h3>
-                                <a href="#!" class="btn">Read More</a>
+                                <a href="blog.php" class="btn">Read More</a>
                             </div>
                         </div>
                     </div>
