@@ -24,6 +24,16 @@ if (!$user) {
 }
 ?>
 
+<?php
+include "connect.php";
+
+// Truy vấn để lấy dữ liệu từ bảng product
+$sql = "SELECT * FROM product";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -211,322 +221,49 @@ if (!$user) {
                     <div class="popular-top">
                         <div class="info">
                             <h2 class="heading lv2">Cà Phê Highlight</h2>
-                            <p class="desc">
-                                Cà phê đặc sản thức uống đa bản sắc
-                            </p>
+                            <p class="desc">Cà phê đặc sản thức uống đa bản sắc</p>
                         </div>
                         <div class="controls">
                             <button class="control-btn" id="left">
-                                <svg
-                                    width="8"
-                                    height="14"
-                                    viewBox="0 0 8 14"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M7 1L1 7L7 13"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
                             <button class="control-btn" id="right">
-                                <svg
-                                    width="8"
-                                    height="14"
-                                    viewBox="0 0 8 14"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M1 1L7 7L1 13"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
                         </div>
                     </div>
 
                     <div class="course-list">
-                        <!-- Course item 1 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/latenong.jpg"
-                                    alt="Basic web design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Latte Nóng
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
+                        <!-- Duyệt qua các sản phẩm và hiển thị -->
+                        <?php foreach ($products as $product): ?>
+                            <div class="course-item">
+                                <a href="#!">
+                                    <img src="./assets/img/<?php echo $product['anh']; ?>" alt="<?php echo $product['ten']; ?>" class="thumb"/>
+                                </a>
+                                <div class="info">
+                                    <div class="head">
+                                        <h3 class="title">
+                                            <a href="#!" class="line-clamp break-all"><?php echo $product['ten']; ?></a>
+                                        </h3>
+                                        <!-- Bạn có thể thêm phần hiển thị của trường 'baohanh', 'trangthai', 'gia' tại đây -->
+                                    </div>
+                                    <p class="desc line-clamp line-2 break-all"><?php echo $product['baohanh']; ?></p>
+                                    <div class="foot">
+                                        <span class="price"><?php echo $product['gia']; ?></span>
+                                        <form action="add_to_cart.php" method="POST">
+                                            <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
+                                            <button class="btn book-btn" type="submit">
+                                                Book Now
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
                             </div>
-                        </div>
-
-                        <!-- Course item 2 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/caramen.jpg"
-                                    alt="UI/UX design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Caramel Macchiato Nóng
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Course item 3 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/caramel-macchiato.jpg"
-                                    alt="Web App design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                           Latte Đá
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Course item 4 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/chocolatenong.jpg"
-                                    alt="Basic web design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Chocolate Nóng
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Course item 5 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/bacsiu.jpg"
-                                    alt="Basic web design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Bạc Sỉu
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Course item 5 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/bacsiu.jpg"
-                                    alt="Basic web design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Bạc Sỉu
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Course item 6 -->
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./assets/img/bacsiu.jpg"
-                                    alt="Basic web design"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <h3 class="title">
-                                        <a
-                                            href="#!"
-                                            class="line-clamp break-all"
-                                        >
-                                            Bạc Sỉu
-                                        </a>
-                                    </h3>
-                                    <div class="rating">
-                                        <img
-                                            src="./assets/icons/star.svg"
-                                            alt="Star"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
-                                    </div>
-                                </div>
-                                <p class="desc line-clamp line-2 break-all">
-                                    Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span>
-                                    <button class="btn book-btn">
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

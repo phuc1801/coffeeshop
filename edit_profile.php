@@ -227,7 +227,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div> <!-- Row END -->
             <!-- button -->
             <div class="gap-3 d-md-flex justify-content-md-end text-center" style="margin-bottom: 50px;">
-                <button type="button" class="btn btn-danger btn-lg">Quay lại</button>
+                <a href="index.php" class="btn btn-primary btn-lg">Quay lại</a>
+
                 <button type="submit" class="btn btn-primary btn-lg">Sửa profile</button>
             </div>
         </form> <!-- Form END -->
