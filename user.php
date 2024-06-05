@@ -114,7 +114,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         <ul class="profile-dropdown-list">
                         <li class="profile-dropdown-list-item">
-                            <a href="edit_profile.php">
+                            <a href="edit_profile2.php">
                             <i class="fa-regular fa-user"></i>
                             Edit Profile
                             </a>
@@ -422,7 +422,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="item">
                             <a href="#!">
                                 <img
-                                    src="./assets/img/dami4.jpeg"
+                                    src="./assets/img/coffee-blogs.jpeg"
                                     alt="How to become a pro web designer in 2022 and
                                 get remot job?"
                                     class="thumb"
@@ -443,7 +443,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="item">
                             <a href="#!">
                                 <img
-                                    src="./assets/img/dami4.jpeg"
+                                    src="./assets/img/coffee-blogs.jpeg"
                                     alt="How to become a pro web designer in 2022 and
                                 get remot job?"
                                     class="thumb"
@@ -464,7 +464,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="item">
                             <a href="#!">
                                 <img
-                                    src="./assets/img/dami4.jpeg"
+                                    src="./assets/img/coffee-blogs.jpeg"
                                     alt="How to become a pro web designer in 2022 and
                                 get remot job?"
                                     class="thumb"

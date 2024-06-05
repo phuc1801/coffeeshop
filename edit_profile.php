@@ -246,7 +246,7 @@ if ($phanloai['type'] == 1) {
             </div> <!-- Row END -->
             <!-- button -->
             <div class="gap-3 d-md-flex justify-content-md-end text-center" style="margin-bottom: 50px;">
-                <a href="<?php echo $redirect_url; ?>" class="btn btn-primary btn-lg">Quay lại</a>
+                <a href="index.php" class="btn btn-primary btn-lg">Quay lại</a>
 
                 <button type="submit" class="btn btn-primary btn-lg">Sửa profile</button>
             </div>

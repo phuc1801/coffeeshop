@@ -21,7 +21,7 @@
             <div class="col-md-8">
                 <div class="card mb-4 shadow-sm">
                     <a href="#!">
-                        <img src="./assets/img/dami4.jpeg" alt="How to become a pro web designer in 2022 and get remote job?" class="card-img-top">
+                        <img src="./assets/img/coffee-blogs.jpeg" alt="How to become a pro web designer in 2022 and get remote job?" class="card-img-top">
                     </a>
                     <div class="card-body text-center">
                         <span class="text-muted">5 May 2024</span>
