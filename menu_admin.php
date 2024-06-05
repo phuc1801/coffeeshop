@@ -76,11 +76,9 @@ if (!$user) {
                         <li>
                             <a href="#!">Menu</a>
                         </li>
+                        
                         <li>
-                            <a href="#!">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#blog">Blog</a>
+                            <a href="blog.php">Blog</a>
                         </li>
                     </ul>
                 </nav>
@@ -106,8 +104,8 @@ if (!$user) {
 
                         <li class="profile-dropdown-list-item">
                             <a href="#">
-                            <i class="fa-regular fa-envelope"></i>
-                            Inbox
+                            <i class="fa-solid fa-wrench"></i>
+                            Chỉnh sửa nội dung
                             </a>
                         </li>
 
@@ -180,7 +178,7 @@ if (!$user) {
                             <div class="rating">
                                 <img src="./assets/icons/star.svg" alt="Star" class="star">
                                 <span class="value">
-                                    <?php echo htmlspecialchars($product['baohanh']); ?>
+                                    4.5
                                 </span>
                             </div>
                         </div>
@@ -191,7 +189,7 @@ if (!$user) {
                             <?php echo htmlspecialchars($product['trangthai']); ?>
                         </p>
                         <div class="foot">
-                            <span class="price">$<?php echo htmlspecialchars($product['gia']); ?></span>
+                            <span class="price"><?php echo htmlspecialchars($product['gia']); ?> VND</span>
                             <div class="btn-cbt">
                                 <a href="edit.php?id=<?php echo $product['id']; ?>">
                                      <button class="btn-minwidth book-btn">

@@ -177,8 +177,8 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         <li class="profile-dropdown-list-item">
                             <a href="home.php">
-                            <i class="fa-regular fa-envelope"></i>
-                            Inbox
+                            <i class="fa-solid fa-wrench"></i>
+                            Chỉnh sửa nội dung
                             </a>
                         </li>
 
@@ -244,7 +244,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php echo htmlspecialchars($item['noidung']); ?>
                             </p>
                             <div class="cta-group">
-                                <a href="#!" class="btn hero-cta"
+                                <a href="menu_admin.php" class="btn hero-cta"
                                     >Xem Sản Phẩm</a
                                 >
                                 <button class="watch-video">

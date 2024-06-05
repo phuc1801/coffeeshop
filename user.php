@@ -120,26 +120,10 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             </a>
                         </li>
 
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-regular fa-envelope"></i>
-                            Inbox
-                            </a>
-                        </li>
+                        
 
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-solid fa-chart-line"></i>
-                            Analytics
-                            </a>
-                        </li>
-
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-solid fa-sliders"></i>
-                            Settings
-                            </a>
-                        </li>
+                       
+                        
 
                         <li class="profile-dropdown-list-item">
                            

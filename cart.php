@@ -96,6 +96,11 @@ if (!empty($cart)) {
                 <div class="summary-checkout">
                     <form action="checkout.php" method="post">
                         <button type="submit" class="checkout-cta">Go to Secure Checkout</button>
+                        
+                    </form>
+
+                    <form action="menu.php" method="post">
+                        <button type="submit" class="checkout-cta" style="margin-top: 10px;">Quay lại</button>
                     </form>
                 </div>
             </div>

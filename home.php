@@ -142,6 +142,7 @@ $home = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
             
             <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+            <a href="index.php">Quay lại</a>
         </form>
     </div>
 

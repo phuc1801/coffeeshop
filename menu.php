@@ -92,11 +92,9 @@ if (!$user) {
                         <li>
                             <a href="menu.php">Menu</a>
                         </li>
+                        
                         <li>
-                            <a href="#!">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#blog">Blog</a>
+                            <a href="blog.php">Blog</a>
                         </li>
                     </ul>
                 </nav>
@@ -120,26 +118,7 @@ if (!$user) {
                             </a>
                         </li>
 
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-regular fa-envelope"></i>
-                            Inbox
-                            </a>
-                        </li>
-
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-solid fa-chart-line"></i>
-                            Analytics
-                            </a>
-                        </li>
-
-                        <li class="profile-dropdown-list-item">
-                            <a href="#">
-                            <i class="fa-solid fa-sliders"></i>
-                            Settings
-                            </a>
-                        </li>
+                        
 
                         <li class="profile-dropdown-list-item">
                             <a href="cart.php">
@@ -188,7 +167,7 @@ if (!$user) {
                             <div class="rating">
                                 <img src="./assets/icons/star.svg" alt="Star" class="star">
                                 <span class="value">
-                                    <?php echo htmlspecialchars($product['baohanh']); ?>
+                                    4.5
                                 </span>
                             </div>
                         </div>
@@ -199,7 +178,7 @@ if (!$user) {
                             <?php echo htmlspecialchars($product['trangthai']); ?>
                         </p>
                         <div class="foot">
-                            <span class="price">$<?php echo htmlspecialchars($product['gia']); ?></span>
+                            <span class="price"><?php echo htmlspecialchars($product['gia']); ?> VNĐ</span>
                             <form action="add_to_cart.php" method="POST">
                                 <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product['id']); ?>">
                                 <button class="btn book-btn" type="submit">
