@@ -51,7 +51,7 @@ function sendMail($email) {
         $mail->Host = 'smtp.gmail.com'; // SMTP servers
         $mail->SMTPAuth = true; // Enable authentication
         $mail->Username = 'phucnd.wordpress@gmail.com'; // SMTP username
-        $mail->Password = 'wkvj dvfr xxjf otgj'; // SMTP password
+        $mail->Password = 'nhxy gtmg hfua pjxl'; // SMTP password
         $mail->SMTPSecure = 'ssl'; // encryption TLS/SSL
         $mail->Port = 465; // port to connect to
         $mail->setFrom('phucnd.wordpress@gmail.com', 'Nguyen Duy Phuc');
